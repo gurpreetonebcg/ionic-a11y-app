@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="f">Female</ion-select-option>
+      <ion-select-option value="m">Male</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Toppings</ion-label>
+    <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+      <ion-select-option value="bacon">Bacon</ion-select-option>
+      <ion-select-option value="olives">Black Olives</ion-select-option>
+      <ion-select-option value="xcheese">Extra Cheese</ion-select-option>
+      <ion-select-option value="peppers">Green Peppers</ion-select-option>
+      <ion-select-option value="mushrooms">Mushrooms</ion-select-option>
+      <ion-select-option value="onions">Onions</ion-select-option>
+      <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+      <ion-select-option value="pineapple">Pineapple</ion-select-option>
+      <ion-select-option value="sausage">Sausage</ion-select-option>
+      <ion-select-option value="Spinach">Spinach</ion-select-option>
+    </ion-select>
+  </ion-item> 
+  <ion-item>
+    <ion-label>Hair Color</ion-label>
+    <ion-select interface="popover" value="brown" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="brown">Brown</ion-select-option>
+      <ion-select-option value="blonde">Blonde</ion-select-option>
+      <ion-select-option value="black">Black</ion-select-option>
+      <ion-select-option value="red">Red</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>Select Date</ion-label>
+    <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label>Select Time</ion-label>
+    <ion-datetime displayFormat="h:mm a"></ion-datetime>
+  </ion-item>
+  
+  <ion-button (click)="popActionSheet()" expand="block" fill="clear" shape="round">
+    Action sheet
+  </ion-button>
+  <ion-button (click)="popToast()" expand="block" fill="clear" shape="round">
+   Toast
+  </ion-button>
+  <ion-button (click)="gotToList()" expand="block" fill="clear" shape="round">
+    List page
+  </ion-button>
+</ion-content>
