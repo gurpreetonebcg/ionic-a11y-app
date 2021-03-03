@@ -78,4 +78,8 @@ export class HomePage {
   gotToList(){    //Navigate to List page
     this.navCtrl.navigateForward('list-page');
   }
+
+  goToSliderPage(){
+    this.navCtrl.navigateForward('slider-page');
+  }
 }

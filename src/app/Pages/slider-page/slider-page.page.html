@@ -1,0 +1,26 @@
+
+<ion-content fullscreen>
+  <ion-item lines="none">
+    <div class="app-logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ionic-logo-landscape.svg/1920px-Ionic-logo-landscape.svg.png" alt="Slider image">
+    </div>
+  </ion-item>
+  <ion-slides pager="true" [options]="slideOpts" #mySlider (ionSlideDidChange)="slideChanged()">
+    <ion-slide *ngFor="let news of newList">
+      <div class="splashContentOuter">
+      <div class="splashContent">
+        <h2>{{news.subject}}</h2>
+        <div class="newDesc">
+         <p [innerHTML]="news.message">{{news.message}}</p>
+        </div>
+        
+      </div>
+      <!-- <div class="newsDateTime">{{news.created | localDate:'MMM d, y hh:mm:ss a'}}
+      </div> -->
+      <ion-button expand="full" size="large" class="newAcknowledgeBtn" (click)="swipeNext()">OK</ion-button>
+      
+    </div>
+    </ion-slide>
+  </ion-slides>
+  <!-- <span class="sr-only" role="alert" aria-live="assertive" aria-relevant="additions" aria-atomic="true" id="spanCountNews"></span> -->
+</ion-content>

@@ -14,7 +14,11 @@ const routes: Routes = [
   {
     path: 'list-page',
     loadChildren: () => import('./Pages/list-page/list-page.module').then( m => m.ListPagePageModule)
+  },  {
+    path: 'slider-page',
+    loadChildren: () => import('./Pages/slider-page/slider-page.module').then( m => m.SliderPagePageModule)
   },
+
 
 ];
 
