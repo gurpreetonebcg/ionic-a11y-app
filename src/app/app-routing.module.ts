@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'slider-page',
     loadChildren: () => import('./Pages/slider-page/slider-page.module').then( m => m.SliderPagePageModule)
   },
+  {
+    path: 'signature-pad',
+    loadChildren: () => import('./Pages/signature-pad/signature-pad.module').then( m => m.SignaturePadPageModule)
+  },
 
 
 ];

@@ -35,6 +35,7 @@ export class SliderPagePage implements OnInit {
   }
 
   swipeNext(){
+    debugger;
     //let spanCountNewPost = document.querySelector('span[id="spanCountNews"]');
     //spanCountNewPost.textContent = "";
     if (this.finalSlide) {
