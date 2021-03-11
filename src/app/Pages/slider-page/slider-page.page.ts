@@ -16,6 +16,7 @@ export class SliderPagePage implements OnInit {
     loop: false,
     allowTouchMove: false,
     pagination: false,
+    gesture: true
   };
   newList = [];
   constructor(private navCtrl: NavController) { }
@@ -35,9 +36,8 @@ export class SliderPagePage implements OnInit {
   }
 
   swipeNext(){
-    debugger;
-    //let spanCountNewPost = document.querySelector('span[id="spanCountNews"]');
-    //spanCountNewPost.textContent = "";
+    let spanCountNewPost = document.querySelector('span[id="spanCountNews"]');
+    spanCountNewPost.textContent = "";
     if (this.finalSlide) {
       this.navCtrl.navigateRoot('/home');
     } else {
@@ -46,16 +46,16 @@ export class SliderPagePage implements OnInit {
       this.content.scrollToTop(400);
       this.slides.lockSwipes( true );
       // this.translateService.get(['News_Post_Changed']).subscribe(lang => {
-      //   spanCountNewPost.textContent = lang['News_Post_Changed'];
+        spanCountNewPost.textContent = "News post changed";
       // });
     }
   }
   finalSlide: boolean = false;
-  slideChanged() {
 
+  slideChanged() {
     let me = this;
       me.slides.isEnd().then((istrue) => {
-        console.log('me.slides.isEnd()',istrue);
+        // console.log('me.slides.isEnd()',istrue);
         if (istrue) {
           me.finalSlide = true;
         } else {
