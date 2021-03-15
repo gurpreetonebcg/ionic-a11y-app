@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActionSheetController, AlertController, LoadingController, ModalController, NavController, ToastController } from '@ionic/angular';
 import { ModalPage } from '../modal/modal.page';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -79,6 +80,7 @@ export class HomePage {
     });
     return await modal.present();
   }  
+  
 
   gotToList(){    //Navigate to List page
     this.navCtrl.navigateForward('list-page');

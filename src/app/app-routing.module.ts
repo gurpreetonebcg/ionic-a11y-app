@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'signature-pad',
     loadChildren: () => import('./Pages/signature-pad/signature-pad.module').then( m => m.SignaturePadPageModule)
+  },  {
+    path: 'modal',
+    loadChildren: () => import('./Pages/modal/modal.module').then( m => m.ModalPageModule)
   },
+
 
 
 ];
