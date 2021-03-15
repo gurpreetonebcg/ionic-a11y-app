@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActionSheetController, AlertController, LoadingController, NavController, ToastController } from '@ionic/angular';
+import { ActionSheetController, AlertController, LoadingController, ModalController, NavController, ToastController } from '@ionic/angular';
+import { ModalPage } from '../modal/modal.page';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +9,7 @@ import { ActionSheetController, AlertController, LoadingController, NavControlle
 })
 export class HomePage {
 
-  constructor(private alertCtrl: AlertController, private actionSheetController: ActionSheetController, private loader: LoadingController, private toast: ToastController, private navCtrl: NavController) {}
-
-  // async onClick() {
-    
-  // }
+  constructor(private alertCtrl: AlertController, private actionSheetController: ActionSheetController, private loader: LoadingController, private toast: ToastController, private navCtrl: NavController, private modalController: ModalController) {}
 
   async popActionSheet() {  
     const actionSheet = await this.actionSheetController.create({   //Action sheet
@@ -74,6 +71,14 @@ export class HomePage {
     });
     toast.then(data => data.present());
   }
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: ModalPage,
+      cssClass: 'my-custom-class',      
+    });
+    return await modal.present();
+  }  
 
   gotToList(){    //Navigate to List page
     this.navCtrl.navigateForward('list-page');
