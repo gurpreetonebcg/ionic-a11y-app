@@ -84,7 +84,10 @@ export class HomePage {
     this.navCtrl.navigateForward('list-page');
   }
 
-  goToSliderPage(){
+  goToSliderPage(){  //Navigate to Slider page
     this.navCtrl.navigateForward('slider-page');
+  }
+  goToSignaturePadPage(){  //Navigate to Signature page
+    this.navCtrl.navigateForward('signature-pad');
   }
 }
