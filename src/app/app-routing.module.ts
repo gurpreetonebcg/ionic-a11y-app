@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'slider-page',
     loadChildren: () => import('./Pages/slider-page/slider-page.module').then( m => m.SliderPagePageModule)
   },
+  {
+    path: 'modal',
+    loadChildren: () => import('./Pages/modal/modal.module').then( m => m.ModalPageModule)
+  },
 
 
 ];

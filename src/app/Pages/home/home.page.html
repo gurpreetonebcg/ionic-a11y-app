@@ -46,6 +46,12 @@
     <ion-label>Select Time</ion-label>
     <ion-datetime displayFormat="h:mm a"></ion-datetime>
   </ion-item>
+  <ion-item>
+    <ion-label>Open Model:</ion-label>
+    <ion-button (click)="openModal()">
+      Modal
+    </ion-button>
+  </ion-item>
   
   <ion-button (click)="popActionSheet()" expand="block" fill="clear" shape="round">
     Action sheet
