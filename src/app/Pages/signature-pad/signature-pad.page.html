@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Signature-Pad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <signature-pad tabindex="0" [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+  <ion-button color="primary" expand="full" size="large" class="margin-left" (click)="clearPad()">Clear</ion-button>
+  <ion-button color="primary" expand="full" size="large" class="margin-left" *ngIf="isdraw" (click)="savePad()">Save</ion-button>
+</ion-content>
